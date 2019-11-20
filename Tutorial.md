@@ -1,6 +1,4 @@
-#
-
- ![](./Documentation/titleBot.png)
+![](./Documentation/titleBot.png)
  
 # Super Meat Bot Tutorial
 
