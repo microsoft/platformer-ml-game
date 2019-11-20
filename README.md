@@ -14,7 +14,7 @@ We'll give feedback on how efficient your training set was. In particular, we'll
 
 ## Setup
 
-For full instructions (including downloading the game) check out [the tutorial](./tutorial.md). The instructions here will allow you to check that your setup supports the game.
+For full instructions (including downloading the game) check out [the tutorial](./Tutorial.md). The instructions here will allow you to check that your setup supports the game.
 
 First make sure Python 3.6.2 is installed. You cannot currently use 3.7. On Windows, you can get 3.6.2 from this [direct link](https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe) or if you want a different installer you can choose [here](https://www.python.org/downloads/release/python-362/). When installing it, make sure you select the "Add to environment variables" checkbox.
 
@@ -26,7 +26,7 @@ pip install gym matplotlib h5py "numpy>=1.14.0,<=1.14.5" Pillow chainer>=4.1.0 c
 
 Download [Tiled level editor](https://www.mapeditor.org/).
 
-Try dragging and dropping the "PlatformerGame/Demo/complete" folder onto the "PlatformerGame/attempt_goal_1.bat" script. If it starts up and shows a gameboy guy running around then you're all set! Try running through the [tutorial](./tutorial.md) now if you haven't already.
+Try dragging and dropping the "PlatformerGame/Demo/complete" folder onto the "PlatformerGame/attempt_goal_1.bat" script. If it starts up and shows a gameboy guy running around then you're all set! Try running through the [tutorial](./Tutorial.md) now if you haven't already.
 
 ## Extensions and Future Work
 
