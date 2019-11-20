@@ -10,19 +10,19 @@ Super Meat Bot is a game about teaching robots to play games for you!
 
 You can get the latest version of Super Meat Bot from VSTS. Open this [link](https://project-athens.visualstudio.com/athens/_git/game_jam2?version=GBsupermeatbot%2Fmaster), then select &quot;Download as Zip&quot; from the top:
 
- ![](.Documentation/download.png)
+ ![](./Documentation/download.png)
 
 Make sure you have Python 3.6.2 installed. Note that this isn&#39;t the latest Python version. You can get Python 3.6.2 for Windows [here](https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe), or for the whole list of installers go [here](https://www.python.org/downloads/release/python-362/). When installing it, make sure you select &quot;Customize Installation&quot;:
 
- ![](.Documentation/installPythonCustomise.png)
+ ![](./Documentation/installPythonCustomise.png)
 
 Skip over the Optional Features page by immediately pressing &quot;Next&quot;. In Advanced Options, check the &quot;Add Python to environment variables&quot; checkbox:
 
- ![](.Documentation/installPythonEnvironment.png)
+ ![](./Documentation/installPythonEnvironment.png)
 
 Once installed, we will need the Python dependencies. Open PowerShell by clicking on Start, then typing &quot;powershell&quot; into the search area. You should see a blue screen:
 
- ![](.Documentation/powershell.png)
+ ![](./Documentation/powershell.png)
 
 Run the following commands.
 
@@ -40,13 +40,13 @@ First we&#39;re going to look at a simple level that is already solved, then you
 
 In Tiled, open SuperMeatBot\SuperMeatBot\Data\Test\Tutorial\goal1.json
 
- ![](.Documentation/tutorialGoalLevel.png)
+ ![](./Documentation/tutorialGoalLevel.png)
 
 This is our goal level. We&#39;ll need to teach our bot to complete this. But how?
 
 In Tiled, open SuperMeatBot\SuperMeatBot\Data\Train\Tutorial\Goal1Solution\run\_right.json
 
- ![](.Documentation/tutorialTrainLevel.png)
+ ![](./Documentation/tutorialTrainLevel.png)
 
 We will use this level to train the bot to run right so that it can complete the level above. Using this smaller level will train the bot much faster and much more reliably than using the goal level alone. The bot will move randomly at first, and will receive a reward when it collects a diamond and when it completes the level.
 
@@ -54,11 +54,11 @@ This trains more reliably because the agent is more likely to randomly gather re
 
 Let&#39;s test whether this training set is enough to complete the whole level. In Windows Explorer, drag the SuperMeatBot\SuperMeatBot\Data\Train\Tutorial\Goal1Solution folder onto the SuperMeatBot\SuperMeatBot\attempt\_tutorial\_1.bat file.
 
- ![](.Documentation/dragToStartGame.png)
+ ![](./Documentation/dragToStartGame.png)
 
 You will see a console immediately appear, and shortly after you will see the agent attempting one of your levels with no skill at all! With our training set and the small target behaviour (just run right), it should learn very fast how to play. We&#39;ll only let it train for 15 runs, which is about 30 seconds. Once it&#39;s trained, we will see it attempting the goal level, and then we&#39;ll get a report on how well we did.
 
- ![](.Documentation/endOfGameSummary.png)
+ ![](./Documentation/endOfGameSummary.png)
 
 It seems we did a great job teaching this bot how to just go right! He managed to reach the exit without falling off 100% of the time (indicated by the Win Rate at the top).
 
@@ -66,7 +66,7 @@ It seems we did a great job teaching this bot how to just go right! He managed t
 
 As before, open up the goal level – this time it is SuperMeatBot\SuperMeatBot\Data\Test\Tutorial\goal2.json.
 
- ![](.Documentation/yourTurnGoal.png)
+ ![](./Documentation/yourTurnGoal.png)
 
 This level is similar to the previous one, except there are some gaps to jump over.
 
@@ -74,11 +74,11 @@ We should train the bot that it should move right, just like the previous exampl
 
 To create our training set we need to create a folder. In Tiled, create a new map using FileNewNew map. Use the same settings as below to configure your map:
 
- ![](.Documentation/tiledNewMapSetup.png)
+ ![](./Documentation/tiledNewMapSetup.png)
 
 Click &quot;Save As…&quot; and navigate to your new folder. You should save it as a .json file. You can save the file with any file name and this will not affect training, so long as it is a .json file it will be picked up.
 
- ![](.Documentation/saveAsJson.png)
+ ![](./Documentation/saveAsJson.png)
 
 Create as many levels as you want and save them in that same folder. Once you&#39;re happy with your selection you can train them by dragging your folder onto SuperMeatBot\SuperMeatBot\attempt\_tutorial\_2.bat.
 
