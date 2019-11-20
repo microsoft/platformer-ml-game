@@ -14,6 +14,8 @@ We'll give feedback on how efficient your training set was. In particular, we'll
 
 ## Setup
 
+For full instructions (including downloading the game) check out [the tutorial](./tutorial.md). The instructions here will allow you to check that your setup supports the game.
+
 First make sure Python 3.6.2 is installed. You cannot currently use 3.7. On Windows, you can get 3.6.2 from this [direct link](https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe) or if you want a different installer you can choose [here](https://www.python.org/downloads/release/python-362/). When installing it, make sure you select the "Add to environment variables" checkbox.
 
 Run the following command on your command line to install Python dependencies
@@ -24,21 +26,7 @@ pip install gym matplotlib h5py "numpy>=1.14.0,<=1.14.5" Pillow chainer>=4.1.0 c
 
 Download [Tiled level editor](https://www.mapeditor.org/).
 
-Try dragging and dropping the "PlatformerGame/Demo/complete" folder onto the "PlatformerGame/attempt_goal_1.bat" script. If it starts up and shows a gameboy guy running around then you're all set!
-
-## Gameplay
-
-In Tiled, open "PlatformerGame/Data/Test/goal1.json". Your agent needs to complete this level.
-
-Use the level editor to create your training levels. These should be 7x5 tiles large. We don't check this, so it's up to you not to cheat! Use 64x64 tile size when creating your level, and use the "Data/PlatformerGame.tsx" tileset. You will be prompted to save these in the .tmx format, but you will need to use the "File" menu to export them to .json files. Create a new folder and save all your .json files into it.
-
-You can create any levels you want. There should only be one player start location per world, but you can have as many exits as you like. The two different ground tiles are interchangeable (whichever type you use, we'll try to make it look pretty in the game).
-
-The agent can see the ground tiles and the exit, but cannot see the diamonds - if you put a diamond over a gap, the agent will collect the diamond when they jump there. Because they can't see the diamond, they will associate the reward with jumping over the gap and do that more often.
-
-Once you have saved your levels as .json files in their own folder you can use the trigger_training.bat script to start the game. Drag your folder onto trigger_training.bat. This will start the training, and you will be shown the agent learning over your training levels! The agent will do 100 training "epochs" (each epoch is a run through all your levels).
-
-Once the agent has finished training, it will attempt the goal level 1000 times, and you will be presented with how often your agent wins the level. You'll see your agent attempting the level, so you can spot areas where it doesn't know what to do and create new training levels to fix it. You'll then see a end-of-game score sheet which will show your win rate, how many levels used and how many diamonds used. Edit your levels and try again!
+Try dragging and dropping the "PlatformerGame/Demo/complete" folder onto the "PlatformerGame/attempt_goal_1.bat" script. If it starts up and shows a gameboy guy running around then you're all set! Try running through the [tutorial](./tutorial.md) now if you haven't already.
 
 ## Extensions and Future Work
 
