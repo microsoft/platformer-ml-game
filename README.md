@@ -1,3 +1,6 @@
+
+![](./Documentation/titleBot.png)
+ 
 # Platformer Game
 
 Platformer Game is a game that explores machine learning and how to train agents more effectively. As you get better at the game, you get better at training ML agents!
