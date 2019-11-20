@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 from malmopy.agents import QLearnerAgent
 from malmopy import AgentMode
 import numpy as np

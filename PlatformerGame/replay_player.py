@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 import render
 from actionsource import ReplayActionSource
 from gamelogic import ActionTypes

@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 import render
 from actionsource import KeyboardActionSource
 from level_loader import load_level_filepath
