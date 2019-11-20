@@ -26,9 +26,9 @@ Once installed, we will need the Python dependencies. Open PowerShell by clickin
 
 Run the following commands.
 
-python -m pip install --upgrade pip
+    python -m pip install --upgrade pip
 
-pip install gym matplotlib h5py &quot;numpy\&gt;=1.14.0,\&lt;=1.14.5&quot; Pillow chainer\&gt;=4.1.0 chainerrl\&gt;=0.3.0 tensorflow\&gt;=1.5.0 pygame
+    pip install gym matplotlib h5py &quot;numpy\&gt;=1.14.0,\&lt;=1.14.5&quot; Pillow chainer\&gt;=4.1.0 chainerrl\&gt;=0.3.0 tensorflow\&gt;=1.5.0 pygame
 
 We&#39;re now set up!
 
