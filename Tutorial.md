@@ -1,12 +1,12 @@
 ![](./Documentation/titleBot.png)
  
-# Super Meat Bot Tutorial
+# Platformer Game Tutorial
 
-Super Meat Bot is a game about teaching robots to play games for you!
+Platformer Game is a game about teaching robots to play games for you!
 
 ## Installing
 
-You can get the latest version of Super Meat Bot from VSTS. Open this [link](https://project-athens.visualstudio.com/athens/_git/game_jam2?version=GBsupermeatbot%2Fmaster), then select &quot;Download as Zip&quot; from the top:
+You can get the latest version of Platformer Game from Github. Open this [link](https://github.com/microsoft/platformer-ml-game), then select &quot;Download as Zip&quot; from the top:
 
  ![](./Documentation/download.png)
 
@@ -26,7 +26,7 @@ Run the following commands.
 
     python -m pip install --upgrade pip
 
-    pip install gym matplotlib h5py &quot;numpy\&gt;=1.14.0,\&lt;=1.14.5&quot; Pillow chainer\&gt;=4.1.0 chainerrl\&gt;=0.3.0 tensorflow\&gt;=1.5.0 pygame
+    pip install gym matplotlib h5py "numpy<2.0,>=1.16.0" Pillow chainer>=4.1.0 chainerrl>=0.3.0 "tensorflow>=1.5.0,<2.0.0" pygame
 
 We&#39;re now set up!
 
@@ -36,13 +36,13 @@ First we&#39;re going to look at a simple level that is already solved, then you
 
 ### Just Going Right
 
-In Tiled, open SuperMeatBot\SuperMeatBot\Data\Test\Tutorial\goal1.json
+In Tiled, open platformer-ml-game\PlatformerGame\Data\Test\Tutorial\goal1.json
 
  ![](./Documentation/tutorialGoalLevel.png)
 
 This is our goal level. We&#39;ll need to teach our bot to complete this. But how?
 
-In Tiled, open SuperMeatBot\SuperMeatBot\Data\Train\Tutorial\Goal1Solution\run\_right.json
+In Tiled, open platformer-ml-game\PlatformerGame\Data\Train\Tutorial\Goal1Solution\run\_right.json
 
  ![](./Documentation/tutorialTrainLevel.png)
 
@@ -50,7 +50,7 @@ We will use this level to train the bot to run right so that it can complete the
 
 This trains more reliably because the agent is more likely to randomly gather rewards. Once the agent is gathering **any** rewards it can then shape its behaviour to gather those rewards more effectively. In the larger level it is less likely to gather any rewards, so it cannot shape its behaviour towards gathering those rewards.
 
-Let&#39;s test whether this training set is enough to complete the whole level. In Windows Explorer, drag the SuperMeatBot\SuperMeatBot\Data\Train\Tutorial\Goal1Solution folder onto the SuperMeatBot\SuperMeatBot\attempt\_tutorial\_1.bat file.
+Let&#39;s test whether this training set is enough to complete the whole level. In Windows Explorer, drag the platformer-ml-game\PlatformerGame\Data\Train\Tutorial\Goal1Solution folder onto the platformer-ml-game\PlatformerGame\attempt\_tutorial\_1.bat file.
 
  ![](./Documentation/dragToStartGame.png)
 
@@ -62,7 +62,7 @@ It seems we did a great job teaching this bot how to just go right! He managed t
 
 ### Your Turn!
 
-As before, open up the goal level – this time it is SuperMeatBot\SuperMeatBot\Data\Test\Tutorial\goal2.json.
+As before, open up the goal level – this time it is platformer-ml-game\PlatformerGame\Data\Test\Tutorial\goal2.json.
 
  ![](./Documentation/yourTurnGoal.png)
 
@@ -78,7 +78,7 @@ Click &quot;Save As…&quot; and navigate to your new folder. You should save it
 
  ![](./Documentation/saveAsJson.png)
 
-Create as many levels as you want and save them in that same folder. Once you&#39;re happy with your selection you can train them by dragging your folder onto SuperMeatBot\SuperMeatBot\attempt\_tutorial\_2.bat.
+Create as many levels as you want and save them in that same folder. Once you&#39;re happy with your selection you can train them by dragging your folder onto platformer-ml-game\PlatformerGame\attempt_tutorial_2.bat.
 
 You&#39;ll start seeing your bot learning from your training levels. After 25 runs, they will attempt the goal level. You will see some of the attempts and the end of game result. If the training levels teach the bot the skills to complete the goal level you will get a high win rate, anything over 75% is impressive. Good luck!
 
@@ -90,7 +90,7 @@ Try to solve this on your own, but if you do get stuck check out these tips.
   - Run right
   - Jump over one-wide gaps
 - The bot looks around itself and bases its actions on what it sees. In the goal level the platform is 1 thick, so you should make your training level platforms one thick so you don&#39;t confuse your bot
-- If the bot won&#39;t learn no matter what levels you try, you can get a solution training set from SuperMeatBot\SuperMeatBot\Data\Train\Tutorial\Hidden\Goal2Solution
+- If the bot won&#39;t learn no matter what levels you try, you can get a solution training set from platformer-ml-game\PlatformerGame\Data\Train\Tutorial\Hidden\Goal2Solution
 
 ## Next Steps
 
